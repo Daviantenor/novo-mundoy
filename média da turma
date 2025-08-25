@@ -1,0 +1,9 @@
+import csv 
+
+notas =[]
+with open ("media.csv","r",newline="") as pasta:
+    leitor=csv.DictReader(pasta)
+    for linha in leitor:
+        notas.append(float(linha["nota"]))
+media=sum(notas)/ len(notas)
+print("Media da turma ",round(media, 2))
