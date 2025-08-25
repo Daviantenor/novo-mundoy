@@ -1,0 +1,7 @@
+import csv
+
+with open('media.csv','a',newline="" )as pasta:
+    escritor=csv.writer(pasta )
+    escritor.writerow(['\nElisa', '18' ,'8.0'])
+
+    
