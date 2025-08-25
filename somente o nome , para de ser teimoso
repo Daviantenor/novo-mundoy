@@ -1,0 +1,11 @@
+import csv
+
+pasta=open("media.csv")
+dados=csv.DictReader(pasta)
+
+for coluna in dados:
+    if coluna['nome']:
+
+        print(coluna['nome'])
+    
+  
