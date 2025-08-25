@@ -1,0 +1,19 @@
+import flet as ft
+
+def main(page:ft.Page):
+    page.theme_mode="Dark"
+    texto_login=ft.Text("Login",size=30,color="white")
+    entrada_texto_login=ft.TextField(width=600,focused_border_color=True)
+    texto_senha=ft.Text("Senha",size=29)
+    entrada_texto_senha=ft.TextField(width=599,password=True,can_reveal_password=True)
+    
+    def click(e):
+        valor_do_texto_login=texto_login.value
+        print("xD",valor_do_texto_login)
+    botão=ft.ElevatedButton("Clique aqui",on_click=click)
+
+    page.add(ft.Row([texto_login,entrada_texto_login,botão]),
+            ft.Row([texto_senha,entrada_texto_senha,botão]),
+            ft.Row())
+
+ft.app(target=main)
